@@ -1,0 +1,120 @@
+$nameFlexStart: Start;
+$nameFlexEnd: End;
+$nameFlexCenter: Center;
+$nameFlexStretch: Stretch;
+$nameFlexSpaceBetween: SpaceBetween;
+$nameFlexSpaceAround: SpaceAround;
+$nameFlexBaseline: Baseline;
+$nameFlexAuto: Auto;
+
+$nameFlexWrap: Wrap;
+$nameFlexNoWrap: NoWrap;
+$nameFlexWrapReverse: WrapReverse;
+$nameFlexRow: Row;
+$nameFlexRowReverse: RowReverse;
+$nameFlexColumn: Column;
+$nameFlexColumnReverse: ColumnReverse;
+
+$flexStart: flex-start;
+$flexEnd: flex-end;
+$flexCenter: center;
+$flexStretch: stretch;
+$flexSpaceBetween: space-between;
+$flexSpaceAround: space-around;
+$flexBaseline: baseline;
+$flexAuto: auto;
+
+$flexWrap: wrap;
+$flexNoWrap: nowrap;
+$flexWrapReverse: wrap-reverse;
+$flexRow: row;
+$flexRowReverse: row-reverse;
+$flexColumn: column;
+$flexColumnReverse: column-reverse;
+
+/********************Flex********************/
+
+.flex {
+  display: flex;
+}
+
+/********************justify-content********************/
+
+$nameFlexJustify: $nameFlexStart, $nameFlexEnd, $nameFlexCenter, $nameFlexSpaceBetween, $nameFlexSpaceAround;
+$flexJustify: $flexStart, $flexEnd, $flexCenter, $flexSpaceBetween, $flexSpaceAround;
+@for $i from 1 through length($flexJustify) {
+  .flexJustify#{nth($nameFlexJustify, $i)} {
+    justify-content: #{nth($flexJustify, $i)};
+  }
+}
+
+/********************flex-flow********************/
+
+$nameFlexFlowDirection: $nameFlexRow, $nameFlexRowReverse, $nameFlexColumn, $nameFlexColumnReverse;
+$nameFlexFlowWrap: $nameFlexWrap, $nameFlexWrapReverse, $nameFlexNoWrap;
+
+$flexFlowDirection: $flexRow, $flexRowReverse, $flexColumn, $flexColumnReverse;
+$flexFlowWrap: $flexWrap, $flexWrapReverse, $flexNoWrap;
+
+@for $i from 1 through length($nameFlexFlowDirection) {
+  @for $x from 1 through length($nameFlexFlowWrap) {
+    .flexFlow#{nth($nameFlexFlowDirection, $i)}#{nth($nameFlexFlowWrap, $x)} {
+      flex-flow: #{nth($flexFlowDirection, $i)} #{nth($flexFlowWrap, $x)};
+    }
+  }
+}
+
+/******************************align-items******************************/
+
+$nameFlexAlign: $nameFlexStart, $nameFlexEnd, $nameFlexCenter, $nameFlexStretch, $nameFlexBaseline;
+$flexAlign: $flexStart, $flexEnd, $flexCenter, $flexStretch, $flexBaseline;
+@for $i from 1 through length($flexAlign) {
+  .flexAlign#{nth($nameFlexAlign, $i)} {
+    align-items: #{nth($flexAlign, $i)};
+  }
+}
+
+/******************************align-content******************************/
+
+$nameFlexAlignContent: $nameFlexStart, $nameFlexEnd, $nameFlexCenter, $nameFlexStretch, $nameFlexSpaceBetween, $nameFlexSpaceAround;
+$flexAlignContent: $flexStart, $flexEnd, $flexCenter, $flexStretch, $flexSpaceBetween, $flexSpaceAround;
+@for $i from 1 through length($flexAlignContent) {
+  .flexAlignContent#{nth($nameFlexAlignContent, $i)} {
+    align-content: #{nth($flexAlignContent, $i)};
+  }
+}
+
+/******************************align-self******************************/
+
+$nameFlexAlignSelf: $nameFlexAuto, $nameFlexStart, $nameFlexEnd, $nameFlexCenter, $nameFlexStretch, $nameFlexBaseline;
+$flexAlignSelf: $flexAuto, $flexStart, $flexEnd, $flexCenter, $flexStretch, $flexBaseline;
+@for $i from 1 through length($flexAlignSelf) {
+  .flexAlignSelf#{nth($nameFlexAlignSelf, $i)} {
+    align-self: #{nth($flexAlignSelf, $i)};
+  }
+}
+
+/******************************Flex******************************/
+
+// Antallet af flex: bestemmes her
+@for $i from 1 through 20 {
+  .flex#{$i} {
+    -webkit-box-flex: #{$i};
+    -webkit-flex: #{$i};
+    -ms-flex: #{$i};
+    flex: #{$i};
+  }
+}
+
+/******************************Order******************************/
+
+.order-99 {
+  order: -99;
+}
+
+// Antallet af order: bestemmes her
+@for $i from -10 through 20 {
+  .order#{$i} {
+    order: #{$i};
+  }
+}

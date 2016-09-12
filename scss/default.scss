@@ -1,0 +1,342 @@
+/********************Text Changes********************/
+.capitalize:first-letter {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.smallcaps {
+  font-variant: small-caps;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+/***********Font Weight************/
+
+.fontWeightLighter {
+  font-weight: lighter;
+}
+
+.fontWeightNormal {
+  font-weight: normal;
+}
+
+.fontWeightBold {
+  font-weight: bold;
+}
+
+.fontWeightBolder {
+  font-weight: bolder;
+}
+
+/***********Font Size************/
+
+@for $i from 1 through 5 {
+  .fontSize#{$i}vw {
+    font-size: #{$i}vw;
+  }
+}
+
+@for $i from 0 through 5 {
+  .fontSize#{$i}-5vw {
+    font-size: #{$i+0.5}vw;
+  }
+}
+
+@for $i from 1 through 5 {
+  .fontSize#{$i}em {
+    font-size: #{$i}em;
+  }
+}
+
+@for $i from 0 through 5 {
+  .fontSize#{$i}-5em {
+    font-size: #{$i+0.5}em;
+  }
+}
+
+@for $i from 1 through 5 {
+  .fontSize#{$i}rem {
+    font-size: #{$i}rem;
+  }
+}
+
+@for $i from 0 through 5 {
+  .fontSize#{$i}-5rem {
+    font-size: #{$i+0.5}rem;
+  }
+}
+
+/***********White Space************/
+
+.whiteSpaceNowrap {
+  white-space: nowrap;
+}
+
+.whiteSpaceNormal {
+  white-space: normal;
+}
+
+/***********Text Align************/
+
+.textAlignLeft {
+  text-align: left;
+}
+
+.textAlignCenter {
+  text-align: center;
+}
+
+.textAlignRight {
+  text-align: right;
+}
+
+/***********Clear************/
+
+.clearBoth {
+  clear: both;
+}
+
+.clearRight {
+  clear: right;
+}
+
+.clearLeft {
+  clear: left;
+}
+
+.clearNone {
+  clear: none;
+}
+
+/***********Float************/
+
+.floatNone {
+  float: none;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.floatRight {
+  float: right;
+}
+
+/***********List Style************/
+
+.listStyleDisc {
+  list-style: disc;
+}
+
+.listStyleDiscColorWhite:before {
+  content: "&#9679 ";
+  color: white;
+}
+
+/***********Cursor************/
+
+$cursor: Auto, Crosshair, Default, Help, Move, None, Not-Allowed, Pointer, Progress, Text, Wait, Zoom-In, Zoom-Out, Initial;
+@for $i from 1 through length($cursor) {
+  .cursor#{nth($cursor, $i)} {
+    cursor: #{nth($cursor, $i)};
+  }
+}
+
+/********************Backgrounds********************/
+
+$colors: Red, Blue, Green, Yellow, Pink, Black, White, Whitesmoke, Lightblue, Grey, Lightgrey;
+@for $i from 1 through length($colors) {
+  .bgColor#{nth($colors, $i)} {
+    background-color: #{nth($colors, $i)};
+  }
+}
+
+/********************Colors********************/
+
+$colors: Red, Blue, Green, Yellow, Pink, Black, White, Whitesmoke, Lightblue, Grey, Lightgrey;
+@for $i from 1 through length($colors) {
+  .color#{nth($colors, $i)} {
+    color: #{nth($colors, $i)};
+  }
+}
+
+/********************Shadows********************/
+
+.boxshadow20 {
+  box-shadow: 0px 0px 20px 2px rgba(74, 74, 74, 1);
+}
+
+.boxshadow10 {
+  box-shadow: 0px 0px 10px 0px rgba(74, 74, 74, 1);
+}
+
+.boxshadow2 {
+  box-shadow: 0px 0px 2px 0px rgba(74, 74, 74, 1);
+}
+
+/********************Borders********************/
+
+$borderSize: 1px;
+$colors: Red, Blue, Green, Yellow, Pink, Black, White, Whitesmoke, Lightblue, Grey, Lightgrey;
+@for $i from 1 through length($colors) {
+  .border#{nth($colors, $i)} {
+    border: $borderSize solid #{nth($colors, $i)};
+  }
+
+  .borderTop#{nth($colors, $i)} {
+    border-top: $borderSize solid #{nth($colors, $i)};
+  }
+
+  .borderRight#{nth($colors, $i)} {
+    border-right: $borderSize solid #{nth($colors, $i)};
+  }
+
+  .borderBottom#{nth($colors, $i)} {
+    border-bottom: $borderSize solid #{nth($colors, $i)};
+  }
+
+  .borderLeft#{nth($colors, $i)} {
+    border-left: $borderSize solid #{nth($colors, $i)};
+  }
+}
+
+/********************Padding********************/
+
+@for $i from 0 through 5 {
+  .padding#{$i}vw {
+    padding: #{$i}vw;
+  }
+
+  .paddingTop#{$i}vw {
+    padding-top: #{$i}vw;
+  }
+
+  .paddingRight#{$i}vw {
+    padding-right: #{$i}vw;
+  }
+
+  .paddingBottom#{$i}vw {
+    padding-bottom: #{$i}vw;
+  }
+
+  .paddingLeft#{$i}vw {
+    padding-left: #{$i}vw;
+  }
+}
+
+@for $i from 0 through 5 {
+  .padding#{$i}-5vw {
+    padding: #{$i+0.5}vw;
+  }
+
+  .paddingTop#{$i}-5vw {
+    padding-top: #{$i+0.5}vw;
+  }
+
+  .paddingRight#{$i}-5vw {
+    padding-right: #{$i+0.5}vw;
+  }
+
+  .paddingBottom#{$i}-5vw {
+    padding-bottom: #{$i+0.5}vw;
+  }
+
+  .paddingLeft#{$i}-5vw {
+    padding-left: #{$i+0.5}vw;
+  }
+}
+
+/********************Margin********************/
+
+.marginAuto {
+  margin: auto;
+}
+
+@for $i from 0 through 5 {
+  .margin#{$i}vw {
+    margin: #{$i}vw;
+  }
+
+  .marginTop#{$i}vw {
+    margin-top: #{$i}vw;
+  }
+
+  .marginRight#{$i}vw {
+    margin-right: #{$i}vw;
+  }
+
+  .marginBottom#{$i}vw {
+    margin-bottom: #{$i}vw;
+  }
+
+  .marginLeft#{$i}vw {
+    margin-left: #{$i}vw;
+  }
+}
+
+@for $i from 0 through 5 {
+  .margin#{$i}-5vw {
+    margin: #{$i+0.5}vw;
+  }
+
+  .marginTop#{$i}-5vw {
+    margin-top: #{$i+0.5}vw;
+  }
+
+  .marginRight#{$i}-5vw {
+    margin-right: #{$i+0.5}vw;
+  }
+
+  .marginBottom#{$i}-5vw {
+    margin-bottom: #{$i+0.5}vw;
+  }
+
+  .marginLeft#{$i}-5vw {
+    margin-left: #{$i+0.5}vw;
+  }
+}
+
+/********************Width********************/
+
+@for $i from 0 through 5 {
+  .width#{$i} {
+    width: #{$i}vw;
+  }
+}
+
+@for $i from 0 through 5 {
+  .width#{$i}-5 {
+    width: $i+0.5vw;
+  }
+}
+
+@for $i from 1 through 12 {
+  .widthPct#{floor(100/$i)} {
+    width: 100%/$i;
+  }
+}
+
+/********************Height********************/
+
+@for $i from 0 through 5 {
+  .height#{$i} {
+    width: #{$i}vw;
+  }
+}
+
+@for $i from 0 through 5 {
+  .height#{$i}-5 {
+    width: $i+0.5vw;
+  }
+}
+
+@for $i from 1 through 12 {
+  .heightPct#{floor(100/$i)} {
+    height: 100%/$i;
+  }
+}

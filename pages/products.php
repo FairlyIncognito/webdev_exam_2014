@@ -1,7 +1,18 @@
 <?php
 require_once('code/fncProductSql.php');
 
-$topBanner = getBannerById($objConnection, 1);
+if($uri[1] == 'men') {
+    $gender = 1;
+    $title = getCategoryName($objConnection, $uri[2]);
+}
+elseif($uri[1] == 'women') {
+    $gender = 2;
+    $title = getCategoryName($objConnection, $uri[2]);
+} else {
+    echo "404: Site not found!";
+    exit;
+}
+
 $sideBanner1 = getBannerById($objConnection, 2);
 $sideBanner2 = getBannerById($objConnection, 3);
 $sideBanner3 = getBannerById($objConnection, 4);
@@ -9,34 +20,28 @@ $sideBanner3 = getBannerById($objConnection, 4);
 
 <div id="home">
     <section id="content">
+        <div id="productMargin">
+            <h1><?php echo $title; ?></h1>
+            <p id="contentDescription">Check our latest <?php echo $uri[1]; ?> stuff in this category.</p>
 
-        <?php
-        $topBanner = $topBanner->fetch_object();
-        echo "<a href='$http/collections/$topBanner->collections_id'><img src='$http/images/website/$topBanner->bannersImage' alt='$topBanner->bannersAlt'></a>";
-        ?>
+            <div id="productWrapper">
+                <?php
 
-            <div id="homeMargin">
-                <h1>Latest Arrivals</h1>
-                <p id="contentDescription">Check out our latest products in this section</p>
+                $result = getProductsByCategoryAndGender($objConnection, $uri[2], $gender);
 
-                <div id="productWrapper">
-                    <?php
+                while($row = $result->fetch_object()) {
+                    echo "<a href='$http/product/$row->idProducts'>";
+                    echo "<div>";
+                    echo "<img src='$http/images/products/$row->productImage' alt='$row->productAlt'>";
+                    echo "<p>$row->productName</p>";
+                    echo "<p>More ></p>";
+                    echo "</div>";
+                    echo "</a>";
+                }
 
-                    $result = getAllProducts($objConnection, 6);
-
-                    while($row = $result->fetch_object()) {
-                        echo "<a href='$http/product/$row->idProducts'>";
-                        echo "<div>";
-                        echo "<img src='$http/images/products/$row->productThumbnail' alt='$row->productAlt'>";
-                        echo "<p>$row->productName</p>";
-                        echo "<p>More ></p>";
-                        echo "</div>";
-                        echo "</a>";
-                    }
-
-                    ?>
-                </div>
+                ?>
             </div>
+        </div>
     </section>
 
     <div id="campaignWrapper">

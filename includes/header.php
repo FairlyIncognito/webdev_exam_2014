@@ -24,6 +24,10 @@ require_once "config.php";
         <link rel="stylesheet" type="text/css" href="<?php echo HTTP; ?>css/default.css"/>
         <link rel="stylesheet" type="text/css" href="<?php echo HTTP; ?>css/flex.css"/>
         <link rel="stylesheet" type="text/css" href="<?php echo HTTP; ?>css/mainStyle.css"/>
+
+        <!--jQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
         <title>Fashion Online</title>
     </head>
     <body>
@@ -45,13 +49,15 @@ require_once "config.php";
                     </form>
                 </div>
 
-                <img src="<?php echo HTTP; ?>images/website/header_logo.png" alt="Fashion Online - Logo in Header">
+                <a href="<?php echo HTTP; ?>">
+                    <img src="<?php echo HTTP; ?>images/website/header_logo.png" alt="Fashion Online - Logo in Header">
+                </a>
 
                 <div id="bottomBar">
                     <ul>
                         <li><a href="<?php echo HTTP; ?>">HOME</a></li>
-                        <li><a href="<?php echo HTTP; ?>men">MEN</a></li>
-                        <li><a href="<?php echo HTTP; ?>women">WOMEN</a></li>
+                        <li><a href="<?php echo HTTP; ?>products/men">MEN</a></li>
+                        <li><a href="<?php echo HTTP; ?>products/women">WOMEN</a></li>
                         <li><a href="<?php echo HTTP; ?>collections">COLLECTIONS</a></li>
                     </ul>
 

@@ -32,7 +32,7 @@ if(isset($_SESSION['state'])) {
         echo 'Database fejl.';
         unset($_SESSION['state']);
     }
-    elseif(isset($_SESSION['state']) && $_SESSION['state'] == 'loginMissingField') {
+    elseif(isset($_SESSION['state']) && $_SESSION['state'] == 'missingField') {
         echo 'Udfyld venligst alle felter.';
         unset($_SESSION['state']);
     }

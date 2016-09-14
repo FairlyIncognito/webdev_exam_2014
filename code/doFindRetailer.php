@@ -18,8 +18,6 @@ if(isset($_POST['submit'])) {
         header('location:' . $http . '/retailer/' . $zipcode . $cityname);
 
     } else {
-        session_start();
-        $_SESSION['state'] = 'missingField';
         header('location:' . $http . '/retailer');
     }
 } else {

@@ -1,7 +1,8 @@
 /******************************Default******************************/
 @import "https://fonts.googleapis.com/css?family=Oswald|Roboto";
 body {
-  background: #f6f6f4; }
+  background: #f6f6f4;
+  overflow-y: scroll; }
 
 .pageWrapper {
   width: 980px;
@@ -76,7 +77,7 @@ header #topBar form input[type=text], header #topBar form input[type=password] {
   padding: 5px 8px 5px 8px;
   outline: none; }
 
-header #topBar form input[type=submit] {
+header #topBar form input[type=submit], #logoutButton {
   background: #ea6a53;
   color: white;
   font-weight: bold;
@@ -84,6 +85,9 @@ header #topBar form input[type=submit] {
   border-radius: 15px;
   padding: 5px 8px 5px 8px;
   cursor: pointer; }
+
+#logoutButton {
+  float: right; }
 
 header img {
   max-width: 191px;
@@ -290,13 +294,13 @@ header #bottomBar form input[type=submit] {
 #product #content #contentWrapper h1 {
   margin-bottom: 15px; }
 
-#tabbedBoxWrapper {
+#product #tabbedBoxWrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start; }
 
-#tabbedBoxWrapper .tabbedBoxButton {
+#product #tabbedBoxWrapper .tabbedBoxButton {
   display: block;
   box-sizing: border-box;
   padding: 10px 15px 10px 15px;
@@ -312,7 +316,7 @@ header #bottomBar form input[type=submit] {
   text-align: left;
   cursor: pointer; }
 
-#tabbedBoxWrapper .tabbedBox {
+#product #tabbedBoxWrapper .tabbedBox {
   padding: 15px 25px 15px 25px;
   background: white;
   border: 1px solid #c3c3c3;
@@ -321,13 +325,13 @@ header #bottomBar form input[type=submit] {
   min-width: 450px;
   margin-left: -1px; }
 
-#tabbedBoxWrapper #description {
+#product #tabbedBoxWrapper #description {
   color: red; }
 
-#tabbedBoxWrapper #reviewsBox {
+#product #tabbedBoxWrapper #reviewsBox {
   display: none; }
 
-#tabbedBoxWrapper #reviews {
+#product #tabbedBoxWrapper #reviews {
   z-index: -2;
   background: #c3c3c3;
   transition: .5s; }
@@ -445,6 +449,140 @@ header #bottomBar form input[type=submit] {
   margin-top: 15px;
   display: block;
   cursor: pointer; }
+
+#newsWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+#newsWrapper div {
+  background: white;
+  padding: 5px;
+  position: relative;
+  max-width: 300px;
+  margin-bottom: 25px; }
+
+#newsWrapper div img {
+  text-align: center; }
+
+#newsWrapper div h2 {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  padding: 5px; }
+
+#newsWrapper div #date {
+  text-align: right;
+  font-weight: bold;
+  padding-right: 10px; }
+
+#newsWrapper div #text {
+  padding-left: 10px; }
+
+.userTopBox {
+  background: url("../images/website/details_top.png") no-repeat;
+  background-size: contain;
+  min-height: 90px;
+  width: 100%; }
+
+.userTopBox * {
+  float: left;
+  clear: left; }
+
+.userTopBox h1 {
+  margin: 15px; }
+
+.userTopBox p {
+  color: white;
+  margin-left: 15px; }
+
+#user #tabbedBoxWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start; }
+
+#user #tabbedBoxWrapper .tabbedBoxButton {
+  display: block;
+  box-sizing: border-box;
+  padding: 10px 15px 10px 15px;
+  margin-top: 15px;
+  width: 150px;
+  font-size: 16pt;
+  font-family: 'Oswald', sans-serif;
+  background: white;
+  border: solid #c3c3c3;
+  border-width: 1px 0 1px 1px;
+  outline: 0;
+  text-align: left;
+  cursor: pointer; }
+
+#user #tabbedBoxWrapper .tabbedBox {
+  margin-top: 25px;
+  padding: 15px 25px 15px 25px;
+  background: white;
+  border: 1px solid #c3c3c3;
+  min-height: 300px;
+  width: 800px;
+  transition: .5s; }
+
+#user #tabbedBoxWrapper .tabbedBoxButton:first-of-type {
+  margin-top: 50px; }
+
+#user #tabbedBoxWrapper #logo {
+  color: red; }
+
+#user #tabbedBoxWrapper #informationBox,
+#user #tabbedBoxWrapper #userDescriptionBox {
+  display: none; }
+
+#user #tabbedBoxWrapper #information,
+#user #tabbedBoxWrapper #userDescription {
+  background: #c3c3c3;
+  transition: .5s; }
+
+#user h2 {
+  margin-top: 25px; }
+
+#user #img {
+  max-width: 200px;
+  margin: 0 0 20px 20px; }
+
+#user #tabbedBoxWrapper {
+  z-index: 5; }
+
+#user .tabbedBox h2 {
+  margin-left: 20px; }
+
+#user #file {
+  display: none; }
+
+#user #fileLabel, #user input {
+  display: block;
+  box-sizing: border-box;
+  padding: 5px 10px 5px 10px;
+  background: #c3c3c3;
+  color: white;
+  margin: 0 0 20px 20px;
+  border: 0;
+  width: 200px;
+  text-align: left; }
+
+#user label {
+  margin-left: 20px; }
+
+#user textarea {
+  margin: 0 0 20px 20px;
+  min-width: 250px;
+  min-height: 200px;
+  max-width: 90%; }
+
+#user .tabbedBox h2 {
+  margin-bottom: 20px; }
 
 /******************************Content******************************/
 /******************************Footer******************************/

@@ -33,6 +33,15 @@
     elseif (isset($uri[0]) && isset($uri[0]) && $uri[0] == 'search') {
         include_once("pages/search.php");
     }
+    elseif (isset($uri[0]) && isset($uri[0]) && $uri[0] == 'news') {
+        include_once("pages/news.php");
+    }
+    elseif (isset($uri[0]) && isset($uri[0]) && $uri[0] == 'user') {
+        include_once("pages/user.php");
+    }
+    elseif (isset($uri[0]) && isset($uri[0]) && $uri[0] == 'admin') {
+        include_once("admin/");
+    }
     else {
         echo "ERROR 404: Forkert Sti";
     }

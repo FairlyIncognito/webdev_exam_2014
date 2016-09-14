@@ -1,6 +1,10 @@
 <?php
 require_once('code/fncProductSql.php');
 
+echo "<h2>";
+include_once('code/doStateFeedback.php');
+echo "</h2>";
+
 $topBanner = getBannerById($objConnection, 1);
 $sideBanner1 = getBannerById($objConnection, 2);
 $sideBanner2 = getBannerById($objConnection, 3);
@@ -51,7 +55,7 @@ $sideBanner3 = getBannerById($objConnection, 4);
         echo "<a href='$http/collections/$sideBanner3->collections_id'><img src='$http/images/website/$sideBanner3->bannersImage' alt='$sideBanner3->bannersAlt'></a>";
         ?>
 
-        <form action="<?php echo HTTP; ?>code/doNewsletter.php" method="post">
+        <form action="<?php echo HTTP; ?>code/doNewsletterSignup.php" method="post">
             <h2>SIGNUP TO OUR NEWSLETTER</h2>
             <div>
                 <label for="email">Email</label>

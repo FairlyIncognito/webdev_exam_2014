@@ -2,9 +2,6 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-//echo "<pre>";
-//var_dump($_SESSION);
-//echo "</pre>";
 
 // Enable Error Reporting
 ini_set('display_errors', 1);
@@ -28,6 +25,9 @@ require_once "config.php";
         <!--jQuery-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
+        <!--Tabbed boxes: async loads script while site parses, then executes script when done loading it-->
+        <script src="js/productTabbedBox.js" async></script>
+        <script src="js/userTabbedBox.js" async></script>
         <title>Fashion Online</title>
     </head>
     <body>
@@ -41,14 +41,23 @@ require_once "config.php";
                         <li><a href="<?php echo HTTP; ?>contact">Contact</a></li>
                     </ul>
 
+
+                    <?php
+                    if(isset($_SESSION['login']) && $_SESSION['login']['userType'] == '2') {
+                    echo "<a href='$http/code/doLogout.php'><button id='logoutButton'>Logout</button></a>";
+                    } else {
+                    ?>
                     <form action="<?php echo HTTP; ?>code/doLogin.php" method="post">
                         <label for="userName">Sign In</label>
                         <input type="text" name="userName" id="userName" placeholder="Username" required>
                         <input type="password" name="userPassword" placeholder="Password" required>
                         <input type="submit" name="submit" value="Go">
                     </form>
-                </div>
 
+                <?php
+                    }
+                ?>
+                </div>
                 <a href="<?php echo HTTP; ?>">
                     <img src="<?php echo HTTP; ?>images/website/header_logo.png" alt="Fashion Online - Logo in Header">
                 </a>

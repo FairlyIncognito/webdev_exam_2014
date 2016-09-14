@@ -84,11 +84,12 @@ else {
 
     // User info
     echo "<div id='contentWrapper'>";
+
     ?>
 
     <div id="infoWrapper">
 
-    <form action="<?php echo HTTP; ?>code/doContact.php" method="post">
+    <form action="<?php echo HTTP; ?>code/doSendMessage.php" method="post">
         <div>
             <input type="text" name="name" id="name" placeholder="NAME" required>
         </div>
@@ -96,6 +97,9 @@ else {
             <input type="email" name="email" id="email" placeholder="EMAIL" required>
         </div>
         <textarea name="text" placeholder="MESSAGE" required></textarea>
+        <h2>
+            <?php include_once('code/doStateFeedback.php'); ?>
+        </h2>
         <br>
         <input type="submit" name="submit" value="SEND US THE MESSAGE">
     </form>

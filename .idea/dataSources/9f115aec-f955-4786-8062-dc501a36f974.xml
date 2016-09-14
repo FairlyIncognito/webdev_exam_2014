@@ -17,249 +17,284 @@
     <table id="12" parent="1" name="fashion_online_users"/>
     <table id="13" parent="1" name="fashion_online_zip"/>
     <table id="14" parent="1" name="fashion_online_banners"/>
-    <column id="15" parent="3" name="idCategories">
+    <table id="15" parent="1" name="fashion_online_newsletter"/>
+    <column id="16" parent="3" name="idCategories">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="16" parent="3" name="categoryName">
+    <column id="17" parent="3" name="categoryName">
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="17" parent="3" name="categoryImage">
+    <column id="18" parent="3" name="categoryImage">
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="18" parent="3" name="categoryAlt">
+    <column id="19" parent="3" name="categoryAlt">
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="19" parent="3" name="gender_id">
+    <column id="20" parent="3" name="gender_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <key id="20" parent="3" name="PRIMARY">
+    <key id="21" parent="3" name="PRIMARY">
       <columns>idCategories</columns>
       <primary>1</primary>
     </key>
-    <column id="21" parent="4" name="fasion_online_categories_idCategories">
+    <column id="22" parent="4" name="fasion_online_categories_idCategories">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="22" parent="4" name="fasion_online_collections_idCollections">
+    <column id="23" parent="4" name="fasion_online_collections_idCollections">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <key id="23" parent="4" name="PRIMARY">
+    <key id="24" parent="4" name="PRIMARY">
       <columns>fasion_online_categories_idCategories
 fasion_online_collections_idCollections</columns>
       <primary>1</primary>
     </key>
-    <column id="24" parent="5" name="idCollections">
+    <column id="25" parent="5" name="idCollections">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="25" parent="5" name="collectionsName">
+    <column id="26" parent="5" name="collectionsName">
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="26" parent="5" name="collectionsImage">
+    <column id="27" parent="5" name="collectionsImage">
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="27" parent="5" name="collectionsAlt">
+    <column id="28" parent="5" name="collectionsAlt">
       <data-type>varchar(45)|0</data-type>
     </column>
-    <key id="28" parent="5" name="PRIMARY">
+    <key id="29" parent="5" name="PRIMARY">
       <columns>idCollections</columns>
       <primary>1</primary>
     </key>
-    <column id="29" parent="6" name="idGender">
+    <column id="30" parent="6" name="idGender">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="30" parent="6" name="gender">
+    <column id="31" parent="6" name="gender">
       <mandatory>1</mandatory>
       <data-type>varchar(45)|0</data-type>
     </column>
-    <key id="31" parent="6" name="PRIMARY">
+    <key id="32" parent="6" name="PRIMARY">
       <columns>idGender</columns>
       <primary>1</primary>
     </key>
-    <column id="32" parent="7" name="idMessages">
+    <column id="33" parent="7" name="idMessages">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="33" parent="7" name="messageName">
+    <column id="34" parent="7" name="messageName">
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="34" parent="7" name="messageEmail">
+    <column id="35" parent="7" name="messageEmail">
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="35" parent="7" name="messageText">
+    <column id="36" parent="7" name="messageText">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="36" parent="7" name="messageDate">
+    <column id="37" parent="7" name="messageDate">
       <data-type>datetime|0</data-type>
     </column>
-    <key id="37" parent="7" name="PRIMARY">
+    <key id="38" parent="7" name="PRIMARY">
       <columns>idMessages</columns>
       <primary>1</primary>
     </key>
-    <column id="38" parent="8" name="idNews">
+    <column id="39" parent="8" name="idNews">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="39" parent="8" name="newsThumbnail">
+    <column id="40" parent="8" name="newsTitle">
+      <mandatory>1</mandatory>
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="40" parent="8" name="newsDate">
+    <column id="41" parent="8" name="newsImage">
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="42" parent="8" name="newsAlt">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="43" parent="8" name="newsDate">
       <data-type>datetime|0</data-type>
     </column>
-    <column id="41" parent="8" name="newsText">
-      <data-type>varchar(45)|0</data-type>
+    <column id="44" parent="8" name="newsText">
+      <data-type>varchar(500)|0</data-type>
     </column>
-    <key id="42" parent="8" name="PRIMARY">
+    <key id="45" parent="8" name="PRIMARY">
       <columns>idNews</columns>
       <primary>1</primary>
     </key>
-    <column id="43" parent="9" name="idProducts">
+    <column id="46" parent="9" name="idProducts">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="44" parent="9" name="productImage">
+    <column id="47" parent="9" name="productImage">
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="45" parent="9" name="productThumbnail">
+    <column id="48" parent="9" name="productThumbnail">
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="46" parent="9" name="productAlt">
+    <column id="49" parent="9" name="productAlt">
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="47" parent="9" name="productName">
+    <column id="50" parent="9" name="productName">
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="48" parent="9" name="productDescription">
+    <column id="51" parent="9" name="productDescription">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="49" parent="9" name="productDate">
+    <column id="52" parent="9" name="productDate">
       <mandatory>1</mandatory>
       <data-type>datetime|0</data-type>
     </column>
-    <column id="50" parent="9" name="categories_id">
+    <column id="53" parent="9" name="categories_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="51" parent="9" name="collections_id">
+    <column id="54" parent="9" name="collections_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <key id="52" parent="9" name="PRIMARY">
+    <key id="55" parent="9" name="PRIMARY">
       <columns>idProducts</columns>
       <primary>1</primary>
     </key>
-    <column id="53" parent="10" name="idReviews">
+    <column id="56" parent="10" name="idReviews">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="54" parent="10" name="reviewsName">
+    <column id="57" parent="10" name="reviewsName">
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="55" parent="10" name="reviewsDate">
+    <column id="58" parent="10" name="reviewsDate">
       <data-type>datetime|0</data-type>
     </column>
-    <column id="56" parent="10" name="reviewsText">
+    <column id="59" parent="10" name="reviewsText">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="57" parent="10" name="products_id">
+    <column id="60" parent="10" name="products_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <key id="58" parent="10" name="PRIMARY">
+    <key id="61" parent="10" name="PRIMARY">
       <columns>idReviews</columns>
       <primary>1</primary>
     </key>
-    <column id="59" parent="11" name="idUserType">
+    <column id="62" parent="11" name="idUserType">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="60" parent="11" name="userType">
+    <column id="63" parent="11" name="userType">
       <data-type>varchar(45)|0</data-type>
     </column>
-    <key id="61" parent="11" name="PRIMARY">
+    <key id="64" parent="11" name="PRIMARY">
       <columns>idUserType</columns>
       <primary>1</primary>
     </key>
-    <column id="62" parent="12" name="idUsers">
+    <column id="65" parent="12" name="idUsers">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="63" parent="12" name="userLogo">
+    <column id="66" parent="12" name="userLogo">
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="64" parent="12" name="userAlt">
+    <column id="67" parent="12" name="userAlt">
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="65" parent="12" name="userAddress">
+    <column id="68" parent="12" name="userAddress">
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="66" parent="12" name="userPhone">
+    <column id="69" parent="12" name="userPhone">
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="67" parent="12" name="userName">
+    <column id="70" parent="12" name="userName">
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="68" parent="12" name="userHashedPassword">
+    <column id="71" parent="12" name="userHashedPassword">
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="69" parent="12" name="userDescription">
-      <data-type>varchar(255)|0</data-type>
+    <column id="72" parent="12" name="userDescription">
+      <data-type>varchar(1000)|0</data-type>
     </column>
-    <column id="70" parent="12" name="userType_id">
+    <column id="73" parent="12" name="userType_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="71" parent="12" name="zip_id">
+    <column id="74" parent="12" name="zip_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <key id="72" parent="12" name="PRIMARY">
+    <index id="75" parent="12" name="userName">
+      <columns>userName</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="76" parent="12" name="PRIMARY">
       <columns>idUsers</columns>
       <primary>1</primary>
     </key>
-    <column id="73" parent="13" name="zipcode">
+    <key id="77" parent="12" name="userName">
+      <columns>userName</columns>
+      <underlying-index>userName</underlying-index>
+    </key>
+    <column id="78" parent="13" name="zipcode">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="74" parent="13" name="cityName">
+    <column id="79" parent="13" name="cityName">
       <data-type>varchar(100)|0</data-type>
     </column>
-    <key id="75" parent="13" name="PRIMARY">
+    <key id="80" parent="13" name="PRIMARY">
       <columns>zipcode</columns>
       <primary>1</primary>
     </key>
-    <column id="76" parent="14" name="idBanners">
+    <column id="81" parent="14" name="idBanners">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="77" parent="14" name="bannersImage">
+    <column id="82" parent="14" name="bannersImage">
       <mandatory>1</mandatory>
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="78" parent="14" name="bannersAlt">
+    <column id="83" parent="14" name="bannersAlt">
       <mandatory>1</mandatory>
       <data-type>varchar(45)|0</data-type>
     </column>
-    <column id="79" parent="14" name="collections_id">
+    <column id="84" parent="14" name="collections_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <key id="80" parent="14" name="PRIMARY">
+    <key id="85" parent="14" name="PRIMARY">
       <columns>idBanners</columns>
+      <primary>1</primary>
+    </key>
+    <column id="86" parent="15" name="idNewsletter">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="87" parent="15" name="newsletterEmail">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="88" parent="15" name="newsletterName">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <key id="89" parent="15" name="PRIMARY">
+      <columns>idNewsletter</columns>
       <primary>1</primary>
     </key>
   </database-model>

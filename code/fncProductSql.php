@@ -345,3 +345,24 @@ function getBannerById($conn, $id) {
         return FALSE;
     }
 }
+
+function getNews($conn)
+{
+    $sql = "
+            SELECT 
+            idNews,
+            newsTitle,
+            newsImage,
+            newsAlt,
+            newsDate,
+            newsText
+            
+            FROM 
+            fashion_online_news
+            ";
+    if($result = $conn->query($sql)) {
+        return $result;
+    } else {
+        return FALSE;
+    }
+}

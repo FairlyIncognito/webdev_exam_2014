@@ -1,8 +1,9 @@
 <?php
+$breakpoint = 'admin';
 define("ROOT", __DIR__ . "/");
 define("HTTP", ($_SERVER["SERVER_NAME"] == "localhost")
     ? "http://localhost:8888/"
-    : "http://xmir19.wi9.sde.dk/"
+    : "http://xmir19.wi9.sde.dk/$breakpoint/"
 );
 $http = rtrim(HTTP, '/');
 
@@ -11,7 +12,7 @@ $uri = explode("/", $_SERVER['REQUEST_URI']);
 
 foreach ($uri as $key => $value) {
     unset($uri[$key]);
-    if ($value == '') {
+    if ($value == $breakpoint) {
         break;
     }
 }

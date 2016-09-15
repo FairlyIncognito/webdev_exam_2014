@@ -1,0 +1,84 @@
+/*************Columns*************/
+.col1 {
+  width: 8.33333%; }
+
+.col2 {
+  width: 16.66667%; }
+
+.col3 {
+  width: 25%; }
+
+.col4 {
+  width: 33.33333%; }
+
+.col5 {
+  width: 41.66666%; }
+
+.col6 {
+  width: 50%; }
+
+.col7 {
+  width: 58.33333%; }
+
+.col8 {
+  width: 66.66666%; }
+
+.col9 {
+  width: 75%; }
+
+.col10 {
+  width: 83.33333%; }
+
+.col11 {
+  width: 91.66666%; }
+
+.col12 {
+  width: 100%; }
+
+/*************Margin**************/
+.marg1 {
+  margin-left: 8.33333%; }
+
+.marg2 {
+  margin-left: 16.66667%; }
+
+.marg3 {
+  margin-left: 25%; }
+
+.marg4 {
+  margin-left: 33.33333%; }
+
+.marg5 {
+  margin-left: 41.66666%; }
+
+.marg6 {
+  margin-left: 50%; }
+
+.marg7 {
+  margin-left: 58.33333%; }
+
+.marg8 {
+  margin-left: 66.66666%; }
+
+.marg9 {
+  margin-left: 75%; }
+
+.marg10 {
+  margin-left: 83.33333%; }
+
+.marg11 {
+  margin-left: 91.66666%; }
+
+.marg12 {
+  margin-left: 100%; }
+
+/*************Magic happens here**************/
+[class*="col"] {
+  float: left; }
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/*# sourceMappingURL=grid.css.map */

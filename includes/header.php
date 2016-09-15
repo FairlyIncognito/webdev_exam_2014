@@ -44,7 +44,12 @@ require_once "config.php";
 
                     <?php
                     if(isset($_SESSION['login']) && $_SESSION['login']['userType'] == '2') {
-                    echo "<a href='$http/code/doLogout.php'><button id='logoutButton'>Logout</button></a>";
+                        echo "<a href='$http/code/doLogout.php'><button id='logoutButton'>Logout</button></a>";
+                        echo "<a href='$http/user'><button id='userButton'>Edit Info</button></a>";
+                    }
+                    elseif(isset($_SESSION['login']) && $_SESSION['login']['userType'] == '1') {
+                        echo "<a href='$http/code/doLogout.php'><button id='logoutButton'>Logout</button></a>";
+                        echo "<a href='$http/admin'><button id='userButton'>Admin Panel</button></a>";
                     } else {
                     ?>
                     <form action="<?php echo HTTP; ?>code/doLogin.php" method="post">

@@ -1,0 +1,26 @@
+/*************Columns*************/
+@for $i from 1 through 12 {
+  .col#{$i} {
+    width: #{8.333333%*$i};
+  }
+}
+
+/*************Margin**************/
+
+@for $i from 1 through 12 {
+  .marg#{$i} {
+    margin-left: #{8.333333%*$i};
+  }
+}
+
+/*************Magic happens here**************/
+
+[class*="col"] {
+  float: left;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

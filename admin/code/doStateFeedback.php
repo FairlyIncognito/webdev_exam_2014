@@ -59,4 +59,12 @@ if(isset($_SESSION['state'])) {
         echo 'Kategorien blev slettet!';
         unset($_SESSION['state']);
     }
+    elseif(isset($_SESSION['state']) && $_SESSION['state'] == 'updateSuccess') {
+        echo 'Your information was updated.';
+        unset($_SESSION['state']);
+    }
+    elseif(isset($_SESSION['state']) && $_SESSION['state'] == 'deleteSuccess') {
+        echo 'Deleted successfully.';
+        unset($_SESSION['state']);
+    }
 }

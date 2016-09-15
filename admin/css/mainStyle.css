@@ -252,7 +252,7 @@ header #bottomBar form input[type=submit] {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  background: url("../images/website/details_top.png") no-repeat;
+  background: url("../../images/website/details_top.png") no-repeat;
   background-size: contain;
   min-height: 90px;
   width: 100%; }
@@ -534,11 +534,13 @@ header #bottomBar form input[type=submit] {
   color: red; }
 
 #user #tabbedBoxWrapper #informationBox,
-#user #tabbedBoxWrapper #userDescriptionBox {
+#user #tabbedBoxWrapper #userDescriptionBox,
+#user #tabbedBoxWrapper #deleteBox {
   display: none; }
 
 #user #tabbedBoxWrapper #information,
-#user #tabbedBoxWrapper #userDescription {
+#user #tabbedBoxWrapper #userDescription,
+#user #tabbedBoxWrapper #delete {
   background: #c3c3c3;
   transition: .5s; }
 
@@ -572,7 +574,7 @@ header #bottomBar form input[type=submit] {
 #user label {
   margin-left: 20px; }
 
-#user textarea {
+#user #userDescriptionBox textarea {
   margin: 0 0 20px 20px;
   min-width: 250px;
   min-height: 200px;
@@ -598,6 +600,83 @@ header #bottomBar form input[type=submit] {
 #userLogo {
   height: 200px;
   width: 150px; }
+
+#deleteBox .confirm {
+  background: #d10000;
+  color: white;
+  border: 0;
+  width: 200px;
+  padding: 15px;
+  font-size: 12pt;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 20px; }
+
+#user #createForm {
+  clear: right;
+  float: right;
+  overflow: hidden;
+  margin-top: 30px; }
+
+#user #createForm * {
+  float: right;
+  clear: both;
+  box-sizing: border-box;
+  width: 200px; }
+
+#user #createForm textarea {
+  margin-bottom: 15px; }
+
+#user #createUserBox {
+  margin: -25px 25px 0 25px;
+  float: right;
+  text-align: right; }
+
+#user #createUserBox img {
+  max-width: 350px; }
+
+.retailerWrapper {
+  max-width: 1000px;
+  border-right: 1px solid #c3c3c3;
+  padding-right: 10px; }
+
+.retailerWrapper img {
+  margin-right: 15px; }
+
+#newsWrapper button {
+  background: #ebebeb;
+  color: #c3c3c3;
+  border: 0;
+  width: 100%;
+  padding: 15px;
+  font-size: 12pt;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 5px 0 25px 0; }
+
+#user textarea {
+  display: block;
+  margin: 0 0 20px 20px; }
+
+.newsBox {
+  min-width: 300px; }
+
+.newsBox #createNewsButton {
+  background: #ebebeb;
+  color: #c3c3c3;
+  border: 0;
+  width: 85%;
+  padding: 15px;
+  font-size: 12pt;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; }
 
 /******************************Content******************************/
 /******************************Footer******************************/

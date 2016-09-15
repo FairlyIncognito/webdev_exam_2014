@@ -105,7 +105,7 @@ header #topBar form input[type=text], header #topBar form input[type=password] {
   outline: none;
 }
 
-header #topBar form input[type=submit], #logoutButton {
+header #topBar form input[type=submit] {
   background: #ea6a53;
   color: rgb(255, 255, 255);
   font-weight: bold;
@@ -113,10 +113,6 @@ header #topBar form input[type=submit], #logoutButton {
   border-radius: 15px;
   padding: 5px 8px 5px 8px;
   cursor: pointer;
-}
-
-#logoutButton {
-  float: right;
 }
 
 header img {
@@ -703,7 +699,28 @@ header #bottomBar form input[type=submit]{
   margin-bottom: 20px;
 }
 
-  /******************************Content******************************/
+#userButton, #logoutButton {
+  float:right;
+  background: #ea6a53;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 8px 5px 8px;
+  cursor: pointer;
+  outline: 0;
+}
+
+#userButton {
+  margin-right: 15px;
+}
+
+#userLogo {
+  height: 200px;
+  width: 150px;
+}
+
+/******************************Content******************************/
 
 /******************************Footer******************************/
 

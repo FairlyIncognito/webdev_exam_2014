@@ -44,7 +44,16 @@ if (isset($_POST['submit'])) {
                 $_SESSION['login']['userName'] = $userName;
                 $_SESSION['login']['userType'] = $userType;
 
-                header("LOCATION: $http/user");
+                if($userType == 2) {
+                    header("LOCATION: $http/user");
+                } elseif($userType == 1) {
+                    header("LOCATION: $http/admin");
+                } else {
+                    session_start();
+                    $_SESSION['state'] = 'databaseError';
+                    header("LOCATION: $http");
+                }
+
             } else {
                 session_start();
                 $_SESSION['state'] = 'wrongPassword';

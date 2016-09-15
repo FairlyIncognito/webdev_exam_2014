@@ -48,7 +48,7 @@ $sideBanner3 = getBannerById($objConnection, 4);
                         while($row = $result->fetch_object()) {
                             echo "<a href='$http/contact/$row->idUsers'>";
                             echo "<div>";
-                            echo "<img src='$http/images/website/$row->userLogo' alt='$row->userAlt'>";
+                            echo "<img src='$http/images/website/$row->userLogo' id='userLogo' alt='$row->userAlt'>";
                             echo "<p>$row->userName</p>";
                             echo "<p>$row->zip_id $row->cityName</p>";
                             echo "<p>More ></p>";
@@ -76,7 +76,7 @@ $sideBanner3 = getBannerById($objConnection, 4);
                         while($row = $result->fetch_object()) {
                             echo "<a href='$http/contact/$row->idUsers'>";
                             echo "<div>";
-                            echo "<img src='$http/images/website/$row->userLogo' alt='$row->userAlt'>";
+                            echo "<img src='$http/images/website/$row->userLogo' id='userLogo' alt='$row->userAlt'>";
                             echo "<p>$row->userName</p>";
                             echo "<p>$row->zip_id $row->cityName</p>";
                             echo "<p>More ></p>";

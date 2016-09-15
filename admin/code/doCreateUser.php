@@ -41,23 +41,24 @@ if (isset($_POST['submit'])) {
             $zip_id
             )
         ) {
-            session_start();
-            $_SESSION['state'] = 'userCreated';
-            header('location:'. $http . '/admin');
+            $idUsers = getUserId($objConnection, $userName);
+            require_once('doCreateUserLogo.php');
+            uploadImageFile('../../images/website/', $_FILES['file'], $objConnection, $idUsers);
+//            echo $_FILES['file'];
         } else {
             session_start();
             $_SESSION['state'] = 'userExists';
-            header('location:'. $http . '/admin');
+            header('location:'. $http . '/retailers');
         }
     } else {
         session_start();
         $_SESSION['state'] = 'missingField';
-        header('location:'. $http . '/admin');
+        header('location:'. $http . '/retailers');
     }
 
 // If submit was not pressed
 } else {
     session_start();
     $_SESSION['state'] = 'submitError';
-    header('location:'. $http . '/admin');
+    header('location:'. $http . '/retailers');
 }

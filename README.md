@@ -1,4 +1,4 @@
-# wihf32b_eksamen
+# webdev_exam_2014
 
 Old exam project from 2014 at a web dev course in Denmark.
 
